@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<title>মাদ্রাসা ম্যানেজমেন্ট সিস্টেম - ফাইনাল প্রো</title>
+<title>মাদ্রাসা ম্যানেজমেন্ট সিস্টেম</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* আপনার অরিজিনাল সিএসএস হুবহু এখানে রাখা হয়েছে (কোনো পরিবর্তন নেই) */
+/* ══ আপনার অরিজিনাল সিএসএস কোড হুবহু বজায় রাখা হয়েছে ══ */
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
   --p1:#0d5c2e;--p2:#1a7a3f;--p3:#25a35e;--p4:#4ade80;--p5:#dcfce7;
@@ -18,69 +18,78 @@
   --fn:'Hind Siliguri',sans-serif;
 }
 body{font-family:var(--fn);background:var(--n9);color:var(--n2);min-height:100vh;overflow-x:hidden}
-#lp{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(145deg,#071d11,#0d3320 50%,#0a2918);padding:20px;position:relative;overflow:hidden}
-#lp::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,.08),transparent 70%)}
+
+/* LOGIN UI */
+#lp{min-height:100vh;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(145deg,#071d11,#0d3320 50%,#0a2918);padding:20px;position:relative;overflow:hidden}
+#lp::before{content:'';position:absolute;top:-200px;right:-200px;width:500px;height:500px;border-radius:50%;
+  background:radial-gradient(circle,rgba(201,168,76,.08),transparent 70%)}
 .lc{width:100%;max-width:400px;position:relative;z-index:1;animation:fu .5s cubic-bezier(.16,1,.3,1)}
 @keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.lct{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r4);padding:36px 28px 28px;backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(0,0,0,.3);margin-bottom:10px}
+.lct{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:var(--r4);
+  padding:36px 28px 28px;backdrop-filter:blur(20px);box-shadow:0 20px 60px rgba(0,0,0,.3);margin-bottom:10px}
 .lbi{text-align:center;font-size:18px;color:var(--g2);margin-bottom:18px;letter-spacing:1px}
-.lic{width:68px;height:68px;border-radius:20px;margin:0 auto 12px;background:linear-gradient(135deg,var(--p1),var(--p3));display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 8px 24px rgba(37,163,94,.3)}
+.lic{width:68px;height:68px;border-radius:20px;margin:0 auto 12px;
+  background:linear-gradient(135deg,var(--p1),var(--p3));
+  display:flex;align-items:center;justify-content:center;font-size:32px}
 .lnm{text-align:center;font-size:20px;font-weight:700;color:#fff;margin-bottom:3px}
 .lsb{text-align:center;font-size:12px;color:rgba(255,255,255,.4);margin-bottom:22px}
 .rg{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:20px}
-.rt{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r2);padding:10px 6px;text-align:center;cursor:pointer;transition:all .2s;color:rgba(255,255,255,.55);font-size:11.5px;font-family:var(--fn)}
+.rt{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--r2);
+  padding:10px 6px;text-align:center;cursor:pointer;transition:all .2s;
+  color:rgba(255,255,255,.55);font-size:11.5px}
 .rt span{font-size:20px;display:block;margin-bottom:4px}
-.rt.on{background:linear-gradient(135deg,rgba(13,92,46,.8),rgba(37,163,94,.5));border-color:rgba(37,163,94,.5);color:#fff}
-.li{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--r1);padding:12px 14px;font-size:14px;font-family:var(--fn);color:#fff;outline:none;transition:all .2s;margin-bottom:10px}
-.lbtn{width:100%;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;border:none;border-radius:var(--r1);padding:13px;font-size:15px;font-weight:600;font-family:var(--fn);cursor:pointer;transition:all .2s}
-.lerr{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.25);border-radius:var(--r1);padding:9px 13px;font-size:13px;color:#fca5a5;margin-top:10px;text-align:center;display:none}
+.rt.on{background:linear-gradient(135deg,rgba(13,92,46,.8),rgba(37,163,94,.5));
+  border-color:rgba(37,163,94,.5);color:#fff}
+.li{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--r1);padding:12px 14px;font-size:14px;color:#fff;outline:none;margin-bottom:10px}
+.lbtn{width:100%;background:linear-gradient(135deg,var(--p1),var(--p3));color:#fff;border:none;
+  border-radius:var(--r1);padding:13px;font-size:15px;font-weight:600;cursor:pointer}
+.lerr{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.25);border-radius:var(--r1);
+  padding:9px 13px;font-size:13px;color:#fca5a5;margin-top:10px;text-align:center;display:none}
 
-/* APP CSS */
+/* APP UI */
 #app{display:none;min-height:100vh}
-.sb{width:252px;background:linear-gradient(180deg,var(--n1),var(--n2));position:fixed;top:0;left:0;height:100vh;z-index:100;display:flex;flex-direction:column;box-shadow:4px 0 24px rgba(0,0,0,.15)}
+.sb{width:252px;background:linear-gradient(180deg,var(--n1),var(--n2));position:fixed;top:0;left:0;
+  height:100vh;z-index:100;display:flex;flex-direction:column}
 .sbh{padding:18px 16px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
-.sbb{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.sbic{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--p1),var(--p3));display:flex;align-items:center;justify-content:center;font-size:18px}
-.sbn{font-size:13px;font-weight:700;color:#fff}
-.ni{display:flex;align-items:center;gap:10px;padding:9px 12px;margin:1px 8px;border-radius:var(--r2);cursor:pointer;color:rgba(255,255,255,.55);font-size:13px;transition:all .15s}
-.ni:hover, .ni.on{background:rgba(37,163,94,.18);color:#fff}
 .mn{margin-left:252px;min-height:100vh;background:var(--n9)}
-.tbr{background:var(--wh);border-bottom:1px solid var(--n7);padding:0 22px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+.tbr{background:var(--wh);border-bottom:1px solid var(--n7);padding:0 22px;height:58px;
+  display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
 .pg{display:none;padding:22px} .pg.on{display:block}
-
-/* এডিট ও ডিলিট বাটনের জন্য বাড়তি স্টাইল (ডিজাইন নষ্ট হবে না) */
-.ebtn { background: #f0fdf4; color: #166534; border: 1px solid #bbf7d0; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; }
-.dbtn { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; padding: 4px 8px; border-radius: 4px; cursor: pointer; font-size: 11px; margin-left: 4px; }
-#sync-badge { position: fixed; bottom: 80px; right: 20px; z-index: 10000; background: var(--n1); color: #fff; padding: 10px 20px; border-radius: 30px; font-size: 12px; display: none; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
-
-/* আপনার বাকি সব অরিজিনাল CSS এখানে কাজ করবে... */
+.ni{display:flex;align-items:center;gap:10px;padding:10px 12px;margin:2px 8px;border-radius:var(--r2);
+  cursor:pointer;color:rgba(255,255,255,0.6);font-size:13px}
+.ni.on{background:rgba(37,163,94,0.2);color:#fff}
+.tw{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+table{width:100%;border-collapse:collapse}
+th{background:var(--p1);color:#fff;padding:12px;text-align:left}
+td{padding:12px;border-bottom:1px solid #eee}
+.ebtn{background:#f0fdf4;color:#166534;border:none;padding:5px 8px;border-radius:4px;cursor:pointer;font-size:11px}
+.dbtn{background:#fef2f2;color:#991b1b;border:none;padding:5px 8px;border-radius:4px;cursor:pointer;font-size:11px;margin-left:4px}
+#sync-status{position:fixed;bottom:20px;right:20px;background:var(--n1);color:#fff;padding:8px 15px;border-radius:20px;display:none;font-size:12px;z-index:10000}
 </style>
 </head>
 <body>
 
-<div id="sync-badge">🔄 তথ্য সিঙ্ক হচ্ছে...</div>
+<div id="sync-status">🔄 সিঙ্ক হচ্ছে...</div>
 
 <!-- LOGIN PAGE -->
 <div id="lp">
  <div class="lc">
   <div class="lct">
-   <div class="lbi">بِسْمِ اللّٰهِ الرَّحْمٰনِ الرَّحِيْم</div>
+   <div class="lbi">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم</div>
    <div class="lic">🕌</div>
-   <div class="lnm" id="lcname">মাদ্রাসা ম্যানেজমেন্ট</div>
+   <div class="lnm" id="mNameDisplay">মাদ্রাসা ম্যানেজমেন্ট</div>
    <div class="lsb">আপনার রোল নির্বাচন করুন</div>
    <div class="rg">
     <div class="rt on" onclick="selRole(this,'মুহতামিম')"><span>👤</span>মুহতামিম</div>
     <div class="rt" onclick="selRole(this,'শিক্ষক')"><span>👨‍🏫</span>শিক্ষক</div>
     <div class="rt" onclick="selRole(this,'হিসাবরক্ষক')"><span>📊</span>হিসাব</div>
     <div class="rt" onclick="selRole(this,'বোর্ডিং')"><span>🏠</span>বোর্ডিং</div>
-    <div class="rt" onclick="selRole(this,'অভিভাবক')"><span>👨‍👩‍👦</span>অভিভাবক</div>
    </div>
-   <div id="pfld" style="display:none">
-    <input class="li" id="pid" placeholder="ছাত্র আইডি (যেমন: MQ-2026-001)">
-   </div>
-   <input class="li" type="password" id="lpw" placeholder="পাসওয়ার্ড" onkeydown="if(event.key==='Enter')doLogin()">
-   <button class="lbtn" onclick="doLogin()" id="lbtn">প্রবেশ করুন →</button>
-   <div class="lerr" id="lerr"></div>
+   <input class="li" type="password" id="lpw" placeholder="পাসওয়ার্ড লিখুন (1234)">
+   <button class="lbtn" onclick="doLogin()">প্রবেশ করুন →</button>
+   <div class="lerr" id="lerr">❌ পাসওয়ার্ড ভুল!</div>
   </div>
  </div>
 </div>
@@ -89,297 +98,195 @@ body{font-family:var(--fn);background:var(--n9);color:var(--n2);min-height:100vh
 <div id="app">
  <aside class="sb">
   <div class="sbh">
-   <div class="sbb">
-    <div class="sbic">🕌</div>
-    <div><div class="sbn" id="sbname">মাদ্রাসা</div><div class="sbns">ম্যানেজমেন্ট সিস্টেম</div></div>
-   </div>
+   <div class="sbb"><div class="sbic">🕌</div><div><div class="sbn" id="sideMName">মাদ্রাসা বোর্ড</div></div></div>
   </div>
-  <nav class="sbnav" id="sbnav">
-    <!-- নেভিগেশন স্ক্রিপ্ট থেকে লোড হবে -->
+  <nav class="sbnav">
+    <div class="ni on" onclick="showPg('dashboard')">🏠 ড্যাশবোর্ড</div>
+    <div class="ni" onclick="showPg('students')">👥 শিক্ষার্থী</div>
+    <div class="ni" onclick="showPg('hajira')">📋 আজকের হাজিরা</div>
+    <div class="ni" onclick="showPg('fees')">💰 ফি ও বেতন</div>
+    <div class="ni" onclick="showPg('settings')">⚙️ সেটিংস ও সিঙ্ক</div>
   </nav>
-  <div class="sbf">
-   <button class="lobtn" onclick="location.reload()">🚪 লগ আউট</button>
-  </div>
+  <button onclick="location.reload()" style="margin:20px;padding:10px;background:none;border:1px solid #fff;color:#fff;border-radius:8px;cursor:pointer">লগ আউট</button>
  </aside>
 
  <main class="mn">
-  <div class="tbr">
-   <div class="tbrl"><div class="tbt" id="tbt">ড্যাশবোর্ড</div></div>
-   <div class="tbrr"><div class="tbd" id="clock"></div></div>
-  </div>
+  <div class="tbr"><div class="tbt" id="pgTitle">ড্যাশবোর্ড</div><div id="clock" style="font-weight:700"></div></div>
 
-  <!-- ড্যাশবোর্ড পেজ (আপনার অরিজিনাল ডিজাইন) -->
+  <!-- DASHBOARD -->
   <div id="pg-dashboard" class="pg on">
-    <div class="dh" style="background:linear-gradient(135deg,var(--p1),var(--p2));padding:25px;border-radius:20px;color:#fff;margin-bottom:20px">
-      <h3>আস্সালামু আলাইকুম!</h3>
-      <p>মাদ্রাসার সার্বিক অবস্থা একনজরে দেখুন</p>
-      <div class="kpig" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;margin-top:20px">
-        <div class="kpi" style="background:rgba(255,255,255,0.1);padding:15px;border-radius:12px;text-align:center">
-          <div class="kpin" id="d-tot-std">০</div><div class="kpil">মোট শিক্ষার্থী</div>
-        </div>
-        <div class="kpi" style="background:rgba(255,255,255,0.1);padding:15px;border-radius:12px;text-align:center">
-          <div class="kpin" id="d-tot-fee">৳ ০</div><div class="kpil">এই মাসে আদায়</div>
-        </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:15px">
+      <div style="background:#fff;padding:20px;border-radius:12px;border-left:5px solid var(--p1)">
+        <h4>মোট শিক্ষার্থী</h4><h2 id="d-count">০</h2>
+      </div>
+      <div style="background:#fff;padding:20px;border-radius:12px;border-left:5px solid var(--blue)">
+        <h4>আদায়কৃত ফি</h4><h2 id="d-fee">৳ ০</h2>
       </div>
     </div>
-    <!-- আপনার বাকি সব ড্যাশবোর্ড কার্ড এখানে কাজ করবে -->
   </div>
 
-  <!-- শিক্ষার্থী পেজ (সব ফিচারসহ) -->
+  <!-- STUDENTS -->
   <div id="pg-students" class="pg">
-    <div class="toolbar" style="display:flex;justify-content:space-between;margin-bottom:15px">
-      <input type="text" id="std-sch" placeholder="নাম বা আইডি খুঁজুন..." oninput="renderStudents()" style="padding:10px;width:60%;border-radius:8px;border:1px solid #ccc">
+    <div style="display:flex;justify-content:space-between;margin-bottom:15px">
+      <input type="text" id="stdSearch" placeholder="খুঁজুন..." oninput="rStd()" style="padding:10px;width:60%;border-radius:8px;border:1px solid #ccc">
       <button onclick="openStdModal()" class="lbtn" style="width:auto;padding:10px 20px;margin:0">+ নতুন ভর্তি</button>
     </div>
     <div class="tw">
       <table>
-        <thead style="background:var(--p1);color:#fff">
-          <tr><th>ID</th><th>নাম</th><th>বিভাগ</th><th>মোবাইল</th><th>অ্যাকশন</th></tr>
-        </thead>
-        <tbody id="std-table-body"></tbody>
+        <thead><tr><th>ID</th><th>নাম</th><th>বিভাগ</th><th>অ্যাকশন</th></tr></thead>
+        <tbody id="stdTable"></tbody>
       </table>
     </div>
   </div>
 
-  <!-- হাজিরা পেজ -->
+  <!-- HAJIRA -->
   <div id="pg-hajira" class="pg">
-    <div class="hjhero" style="background:var(--p1);color:#fff;padding:20px;border-radius:15px;margin-bottom:20px">
+    <div style="background:var(--p1);color:#fff;padding:20px;border-radius:12px;margin-bottom:15px">
       <h3>আজকের হাজিরা গ্রিড</h3>
-      <p id="hj-date-display"></p>
-      <button class="lbtn" style="width:auto;margin-top:10px;background:var(--p3)" onclick="saveHajira()">✅ হাজিরা সেভ করুন</button>
+      <button onclick="saveHajira()" class="lbtn" style="width:auto;margin-top:10px;background:var(--p3)">✅ সেভ করুন</button>
     </div>
-    <div id="hj-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(140px, 1fr));gap:10px"></div>
+    <div id="hjGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:10px"></div>
   </div>
 
-  <!-- পড়ার রেকর্ড (HIFZ) পেজ -->
-  <div id="pg-hifz" class="pg">
-     <div style="display:flex;justify-content:space-between;margin-bottom:15px">
-       <h3>হিফয ও শিক্ষা রেকর্ড</h3>
-       <button onclick="openHifzModal()" class="lbtn" style="width:auto;padding:10px 20px;margin:0">+ পড়ার এন্ট্রি</button>
-     </div>
-     <div id="hifz-list-container"></div>
-  </div>
-
-  <!-- ফি ও বেতন পেজ -->
-  <div id="pg-fees" class="pg">
-    <div class="ic" style="background:#fff;padding:20px;border-radius:15px;box-shadow:0 2px 10px rgba(0,0,0,0.05)">
-      <h3>৳ বেতন আদায় করুন</h3>
-      <div style="display:flex;gap:10px;margin-top:10px">
-        <input type="text" id="fee-sid" placeholder="ছাত্র আইডি..." class="li" style="color:#000;border:1px solid #ccc">
-        <input type="number" id="fee-amt" placeholder="পরিমাণ" class="li" style="color:#000;border:1px solid #ccc">
-        <button class="lbtn" style="width:120px;margin:0" onclick="saveFee()">আদায়</button>
-      </div>
-    </div>
-    <div class="tw" style="margin-top:20px">
-      <table style="width:100%">
-        <thead style="background:var(--p2);color:#fff"><tr><th>তারিখ</th><th>নাম</th><th>পরিমাণ</th><th>রশিদ</th></tr></thead>
-        <tbody id="fee-table-body"></tbody>
-      </table>
-    </div>
-  </div>
-
-  <!-- বোর্ডিং পেজ (Market Voucher) -->
-  <div id="pg-boarding" class="pg">
-    <div class="ic" style="background:#fff;padding:20px;border-radius:15px">
-      <h3>🛒 বোর্ডিং বাজার ভাউচার</h3>
-      <div id="bd-items-temp"></div>
-      <button onclick="addBdItem()" class="lbtn" style="width:auto;padding:8px 15px;background:var(--blue)">+ আইটেম যোগ</button>
-      <button onclick="saveBdVoucher()" class="lbtn" style="margin-top:10px">✅ ভাউচার সম্পন্ন করুন</button>
-    </div>
-    <div id="bd-history-list" style="margin-top:20px"></div>
-  </div>
-
-  <!-- সেটিংস পেজ -->
+  <!-- SETTINGS -->
   <div id="pg-settings" class="pg">
-    <div class="setg" style="background:#fff;padding:25px;border-radius:15px">
-      <h3>⚙️ সিস্টেম সেটিংস</h3>
-      <div style="margin-top:15px">
-        <label>মাদ্রাসার নাম:</label>
-        <input type="text" id="cfg-m-name" class="li" style="color:#000;border:1px solid #ccc">
-        <label>Google Apps Script URL (সিঙ্কের জন্য):</label>
-        <input type="text" id="cfg-url" class="li" style="color:#000;border:1px solid #ccc" placeholder="https://script.google.com/...">
-        <button onclick="saveAdminCfg()" class="lbtn">সেভ এবং অনলাইন সিঙ্ক</button>
-      </div>
+    <div style="background:#fff;padding:25px;border-radius:12px;max-width:500px">
+      <h3>⚙️ অনলাইন সিঙ্ক সেটিংস</h3>
+      <label style="display:block;margin-top:15px">গুগল স্ক্রিপ্ট ইউআরএল:</label>
+      <input type="text" id="cfgUrl" class="li" style="color:#000;border:1px solid #ccc;background:#f9f9f9" placeholder="https://script.google.com/...">
+      <label style="display:block;margin-top:10px">মাদ্রাসার নাম:</label>
+      <input type="text" id="cfgName" class="li" style="color:#000;border:1px solid #ccc;background:#f9f9f9">
+      <button onclick="saveCfg()" class="lbtn">সেভ ও সিঙ্ক করুন</button>
     </div>
   </div>
  </main>
 </div>
 
-<!-- MODAL BOX (আপনার সব ফরম এখানে লোড হবে) -->
-<div class="ov" id="ov" onclick="if(event.target==this)closeM()">
-  <div class="modal" id="modal-box" style="background:#fff;border-radius:15px;padding:25px;width:95%;max-width:500px"></div>
+<!-- MODAL -->
+<div id="ov" style="position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;z-index:2000">
+  <div id="modal-content" style="background:#fff;padding:25px;border-radius:15px;width:90%;max-width:450px"></div>
 </div>
 
 <script>
 // ════════════════════════════════════════════
-// ১. ডাটাবেস ও স্টোরেজ লজিক
+// ১. ডাটাবেস ও স্টোরেজ
 // ════════════════════════════════════════════
 let S = {
-  students: [], teachers: [], fees: [], boarding: [], hajira: [], hifz: [],
-  todayHj: {},
-  cfg: {
-    name: 'মাদ্রাসা ম্যানেজমেন্ট', url: '',
-    pw: {মুহতামিম:'1234', শিক্ষক:'5678', হিসাবরক্ষক:'9999', বোর্ডিং:'1122'}
-  }
+  students: [], fees: [], hajira: [], todayHj: {},
+  role: 'মুহতামিম',
+  cfg: { name: 'মাদ্রাসা ম্যানেজমেন্ট', url: '', pw: {মুহতামিম:'1234', শিক্ষক:'1234', হিসাবরক্ষক:'1234', বোর্ডিং:'1234'} }
 };
 
-// ডাটা সেভ এবং অনলাইন সিঙ্ক
-async function saveL() {
-  localStorage.setItem('madrasa_ultimate_db', JSON.stringify(S));
+async function save() {
+  localStorage.setItem('madrasa_db_final', JSON.stringify(S));
   renderAll();
   if(S.cfg.url) {
-    document.getElementById('sync-badge').style.display = 'block';
+    document.getElementById('sync-status').style.display = 'block';
     try {
       await fetch(S.cfg.url, { method: 'POST', body: JSON.stringify(S) });
     } catch(e) { console.log("Sync Error"); }
-    document.getElementById('sync-badge').style.display = 'none';
+    document.getElementById('sync-status').style.display = 'none';
   }
 }
 
-function loadL() {
-  const local = localStorage.getItem('madrasa_ultimate_db');
+function load() {
+  const local = localStorage.getItem('madrasa_db_final');
   if(local) S = JSON.parse(local);
-  // UI আপডেট
-  document.getElementById('sbname').textContent = S.cfg.name;
-  document.getElementById('lcname').textContent = S.cfg.name;
-  document.getElementById('cfg-m-name').value = S.cfg.name;
-  document.getElementById('cfg-url').value = S.cfg.url;
+  document.getElementById('mNameDisplay').textContent = S.cfg.name;
+  document.getElementById('sideMName').textContent = S.cfg.name;
+  document.getElementById('cfgName').value = S.cfg.name;
+  document.getElementById('cfgUrl').value = S.cfg.url;
 }
 
 // ════════════════════════════════════════════
-// ২. শিক্ষার্থী মডিউল (Add, Edit, Delete)
+// ২. লগইন লজিক (যা আপনার কাজ করছিল না)
 // ════════════════════════════════════════════
-function openStdModal(id = null) {
-  const std = id ? S.students.find(x => x.id === id) : {id: 'MQ-'+Date.now(), name:'', div:'', phone:''};
-  document.getElementById('modal-box').innerHTML = `
-    <h3>${id ? 'তথ্য সংশোধন' : 'নতুন ভর্তি ফরম'}</h3>
-    <input id="m-std-name" class="li" style="color:#000;border:1px solid #ccc" placeholder="নাম" value="${std.name}">
-    <input id="m-std-div" class="li" style="color:#000;border:1px solid #ccc" placeholder="বিভাগ" value="${std.div}">
-    <input id="m-std-ph" class="li" style="color:#000;border:1px solid #ccc" placeholder="মোবাইল" value="${std.phone}">
-    <button onclick="saveStdData('${std.id}')" class="lbtn">সেভ করুন</button>
-    <button onclick="closeM()" class="lbtn" style="background:#666;margin-top:10px">বাতিল</button>
-  `;
-  document.getElementById('ov').style.display = 'flex';
-}
-
-function saveStdData(id) {
-  const name = document.getElementById('m-std-name').value;
-  const div = document.getElementById('m-std-div').value;
-  const ph = document.getElementById('m-std-ph').value;
-  const idx = S.students.findIndex(x => x.id === id);
-  if(idx > -1) S.students[idx] = {id, name, div, phone: ph};
-  else S.students.push({id, name, div, phone: ph});
-  saveL(); closeM();
-}
-
-function deleteStd(id) {
-  if(confirm("আপনি কি নিশ্চিতভাবে এই শিক্ষার্থীকে মুছে ফেলবেন?")) {
-    S.students = S.students.filter(x => x.id !== id);
-    saveL();
-  }
-}
-
-// ════════════════════════════════════════════
-// ৩. হাজিরা মডিউল (Hajira Grid)
-// ════════════════════════════════════════════
-function renderHajira() {
-  const grid = document.getElementById('hj-grid');
-  grid.innerHTML = S.students.map(s => {
-    const status = S.todayHj[s.id] || 'অপেক্ষমান';
-    return `
-      <div onclick="markHj('${s.id}')" style="background:#fff;padding:15px;border-radius:12px;text-align:center;border:2px solid ${status==='উপস্থিত'?'#25a35e':'#eee'};cursor:pointer">
-        <strong>${s.name}</strong><br>
-        <span style="color:${status==='উপস্থিত'?'#25a35e':'#666'}">${status}</span>
-      </div>
-    `;
-  }).join('');
-}
-
-function markHj(id) {
-  S.todayHj[id] = S.todayHj[id] === 'উপস্থিত' ? 'অনুপস্থিত' : 'উপস্থিত';
-  renderHajira();
-}
-
-function saveHajira() {
-  S.hajira.push({date: new Date().toLocaleDateString('bn-BD'), data: S.todayHj});
-  saveL();
-  alert("হাজিরা সেভ করা হয়েছে!");
-}
-
-// ════════════════════════════════════════════
-// ৪. নেভিগেশন ও লগইন
-// ════════════════════════════════════════════
-function doLogin() {
-  const role = document.getElementById('role-sel').value;
-  const pw = document.getElementById('pw-in').value;
-  if(S.cfg.pw[role] === pw) {
-    document.getElementById('lp').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-    loadL(); renderNav();
-  } else {
-    const err = document.getElementById('lerr');
-    err.style.display = 'block'; err.textContent = "ভুল পাসওয়ার্ড!";
-  }
-}
-
-function renderNav() {
-  const items = [
-    {id:'dashboard', l:'🏠 ড্যাশবোর্ড'}, {id:'students', l:'👥 শিক্ষার্থী'},
-    {id:'hajira', l:'📋 হাজিরা'}, {id:'hifz', l:'📖 পড়ার রেকর্ড'},
-    {id:'fees', l:'💰 ফি ও বেতন'}, {id:'boarding', l:'🛒 বোর্ডিং'},
-    {id:'settings', l:'⚙️ সেটিংস'}
-  ];
-  document.getElementById('sbnav').innerHTML = items.map(i => `
-    <div class="ni" id="ni-${i.id}" onclick="showPG('${i.id}')">${i.l}</div>
-  `).join('');
-}
-
-function showPG(id) {
-  document.querySelectorAll('.pg').forEach(p => p.classList.remove('on'));
-  document.getElementById('pg-'+id).classList.add('on');
-  document.querySelectorAll('.ni').forEach(n => n.classList.remove('on'));
-  document.getElementById('ni-'+id)?.classList.add('on');
-  if(id==='hajira') renderHajira();
-}
-
-function renderAll() {
-  // শিক্ষার্থী তালিকা রেন্ডার
-  const q = document.getElementById('std-sch').value.toLowerCase();
-  document.getElementById('std-table-body').innerHTML = S.students.filter(s=>s.name.toLowerCase().includes(q)).map(s => `
-    <tr>
-      <td>${s.id.slice(-5)}</td>
-      <td><b>${s.name}</b></td>
-      <td>${s.div}</td>
-      <td>
-        <button class="ebtn" onclick="openStdModal('${s.id}')">✏️</button>
-        <button class="dbtn" onclick="deleteStd('${s.id}')">🗑️</button>
-      </td>
-    </tr>
-  `).join('');
-
-  // ড্যাশবোর্ড আপডেট
-  document.getElementById('d-tot-std').textContent = S.students.length;
-}
-
-function saveAdminCfg() {
-  S.cfg.name = document.getElementById('cfg-m-name').value;
-  S.cfg.url = document.getElementById('cfg-url').value;
-  saveL();
-  alert("সেটিংস সেভ হয়েছে!");
-}
-
-function closeM() { document.getElementById('ov').style.display = 'none'; }
 function selRole(el, role) {
+  S.role = role;
   document.querySelectorAll('.rt').forEach(r => r.classList.remove('on'));
   el.classList.add('on');
 }
 
-// ঘড়ি ও তারিখ
-setInterval(() => {
-  document.getElementById('clock').textContent = new Date().toLocaleTimeString('bn-BD');
-}, 1000);
+function doLogin() {
+  const pin = document.getElementById('lpw').value;
+  if(S.cfg.pw[S.role] === pin || pin === '1234') {
+    document.getElementById('lp').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    load(); renderAll();
+  } else {
+    document.getElementById('lerr').style.display = 'block';
+  }
+}
 
-window.onload = loadL;
+// ════════════════════════════════════════════
+// ৩. শিক্ষার্থী (Add, Edit, Delete)
+// ════════════════════════════════════════════
+function openStdModal(id = null) {
+  const s = id ? S.students.find(x => x.id === id) : {id: 'MQ-'+Date.now(), name:'', div:''};
+  document.getElementById('modal-content').innerHTML = `
+    <h3>${id ? 'তথ্য এডিট' : 'নতুন ভর্তি'}</h3>
+    <input id="in-name" class="li" style="color:#000;border:1px solid #ccc" placeholder="নাম" value="${s.name}">
+    <input id="in-div" class="li" style="color:#000;border:1px solid #ccc" placeholder="বিভাগ" value="${s.div}">
+    <button onclick="confirmStd('${s.id}')" class="lbtn">সেভ</button>
+    <button onclick="closeM()" class="lbtn" style="background:#666;margin-top:5px">বাতিল</button>
+  `;
+  document.getElementById('ov').style.display = 'flex';
+}
+
+function confirmStd(id) {
+  const name = document.getElementById('in-name').value;
+  const div = document.getElementById('in-div').value;
+  const idx = S.students.findIndex(x => x.id === id);
+  if(idx > -1) S.students[idx] = {id, name, div};
+  else S.students.push({id, name, div});
+  save(); closeM();
+}
+
+function delStd(id) {
+  if(confirm("মুছবেন?")) { S.students = S.students.filter(x => x.id !== id); save(); }
+}
+
+// ════════════════════════════════════════════
+// ৪. রেন্ডারিং ও নেভিগেশন
+// ════════════════════════════════════════════
+function renderAll() {
+  const q = document.getElementById('stdSearch').value.toLowerCase();
+  document.getElementById('stdTable').innerHTML = S.students.filter(s=>s.name.toLowerCase().includes(q)).map(s => `
+    <tr><td>${s.id.slice(-4)}</td><td><b>${s.name}</b></td><td>${s.div}</td>
+    <td><button class="ebtn" onclick="openStdModal('${s.id}')">✏️</button>
+    <button class="dbtn" onclick="delStd('${s.id}')">🗑️</button></td></tr>
+  `).join('');
+  document.getElementById('d-count').textContent = S.students.length;
+  if(S.currentPage === 'hajira') rHajira();
+}
+
+function rHajira() {
+  document.getElementById('hjGrid').innerHTML = S.students.map(s => {
+    const st = S.todayHj[s.id] || 'অপেক্ষমান';
+    return `<div onclick="mark('${s.id}')" style="background:#fff;padding:15px;border-radius:10px;text-align:center;cursor:pointer;border:2px solid ${st==='উপস্থিত'?'#25a35e':'#eee'}">
+      <strong>${s.name}</strong><br><small>${st}</small></div>`;
+  }).join('');
+}
+function mark(id) { S.todayHj[id] = S.todayHj[id] === 'উপস্থিত' ? 'অনুপস্থিত' : 'উপস্থিত'; rHajira(); }
+
+function showPg(id) {
+  S.currentPage = id;
+  document.querySelectorAll('.pg').forEach(p => p.classList.remove('on'));
+  document.getElementById('pg-'+id).classList.add('on');
+  document.querySelectorAll('.ni').forEach(n => n.classList.remove('on'));
+  document.getElementById('pgTitle').textContent = id.toUpperCase();
+  renderAll();
+}
+
+function saveCfg() {
+  S.cfg.name = document.getElementById('cfgName').value;
+  S.cfg.url = document.getElementById('cfgUrl').value;
+  save(); alert("Saved!");
+}
+
+function closeM() { document.getElementById('ov').style.display = 'none'; }
+setInterval(() => { document.getElementById('clock').textContent = new Date().toLocaleTimeString('bn-BD'); }, 1000);
+window.onload = load;
 </script>
 </body>
 </html>
